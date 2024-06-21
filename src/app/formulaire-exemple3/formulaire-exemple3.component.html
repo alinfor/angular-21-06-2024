@@ -1,0 +1,23 @@
+<p>Template driven forms (TDF)*2</p>
+<div class="d-flex justify-content-center align-items-center" style="height: 100vh;">
+    <form  #form="ngForm" (ngSubmit)="onSubmit(form.value)"  class="p-4 bg-light rounded" style="width: 300px;">
+        <div class="mb-3">
+            <label for="email" class="form-label">Email:</label>
+            <input type="email"  email class="form-control" [(ngModel)]="credential.email" required name="email" #emailRef="ngModel">
+            <div *ngIf="emailRef.invalid && emailRef.touched">
+                <div *ngIf="emailRef.errors?.['email'] || emailRef.errors?.['required']">Email obligatoire</div>
+            </div>
+        </div>
+        <div class="mb-3">
+            <label for="password" class="form-label">Password:</label>
+            <input type="password"  class="form-control" [(ngModel)]="credential.password" required name="password" #passwordRef="ngModel">
+            <div *ngIf="passwordRef.invalid && passwordRef.touched">
+                <div *ngIf="passwordRef.errors?.['required']">password obligatoire</div>
+            </div>
+        </div>
+        <div  class="d-grid gap-2" >
+            <button 
+                type="submit" class="btn btn-primary">se connecter</button>
+        </div>
+    </form>
+</div>
