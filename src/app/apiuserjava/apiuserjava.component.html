@@ -1,0 +1,19 @@
+<table class="table table-hover table-bordered">
+    <tr>
+        <td scope="col">#</td>
+        <td scope="col">Login</td>
+        <td scope="col">Email</td>
+        <td scope="col">Name</td>
+        <td scope="col">Téléphone</td>
+    </tr>
+    <tr *ngFor="let item of users; let i=index">
+        <td scope="row">{{i}}</td>
+        <td>{{item.login}}</td>
+        <td>{{item.email}}</td>
+        <td>{{item.name}}</td>
+        <td *ngIf="isValidPhone(item.phone); else errorphone">{{item.phone}}</td>
+        <ng-template #errorphone>
+            <td>Aucun numero renseigne</td>
+        </ng-template> 
+    </tr>
+</table>

@@ -17,6 +17,7 @@ import { AppRoutingModule } from 'app-routing.modules';
 import { NotfoundComponent } from './notfound/notfound.component';
 import { HomeComponent } from './home/home.component';
 import { UsersComponent } from './users/users.component';
+import { ApiuserjavaComponent } from './apiuserjava/apiuserjava.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { UsersComponent } from './users/users.component';
     FormulaireExemple5Component,
     NotfoundComponent,
     HomeComponent,
-    UsersComponent
+    UsersComponent,
+    ApiuserjavaComponent
   ],
   imports: [
     BrowserModule,
