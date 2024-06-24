@@ -1,0 +1,19 @@
+<p>usersjsonplaceholder works!</p>
+<div>
+    <div class="container">
+        <h2>Users</h2>
+        <ul *ngIf="users.length > 0; else noUsers">
+          <li *ngFor="let user of users">
+            <h3>{{ user.name }} ({{ user.username }})</h3>
+            <p>Email: {{ user.email }}</p>
+            <p>Phone: {{ user.phone }}</p>
+            <p>Website: <a href="http://{{ user.website }}" target="_blank">{{ user.website }}</a></p>
+            <p>Address: {{ user.address.street }}, {{ user.address.suite }}, {{ user.address.city }}, {{ user.address.zipcode }}</p>
+            <p>Company: {{ user.company.name }} - {{ user.company.catchPhrase }}</p>
+          </li>
+        </ul>
+        <ng-template #noUsers>
+          <p>No users available.</p>
+        </ng-template>
+      </div>
+</div>

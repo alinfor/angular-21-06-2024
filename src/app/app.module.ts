@@ -19,6 +19,8 @@ import { HomeComponent } from './home/home.component';
 
 import { ApiuserjavaComponent } from './apiuserjava/apiuserjava.component';
 import { ApiuserjsonplaceholderComponent } from './apiuserjsonplaceholder/apiuserjsonplaceholder.component';
+import { UsersjsonplaceholderComponent } from './usersjsonplaceholder/usersjsonplaceholder.component';
+import { UsersjavaComponent } from './usersjava/usersjava.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +37,9 @@ import { ApiuserjsonplaceholderComponent } from './apiuserjsonplaceholder/apiuse
     NotfoundComponent,
     HomeComponent,
     ApiuserjavaComponent,
-    ApiuserjsonplaceholderComponent
+    ApiuserjsonplaceholderComponent,
+    UsersjsonplaceholderComponent,
+    UsersjavaComponent
   ],
   imports: [
     BrowserModule,
