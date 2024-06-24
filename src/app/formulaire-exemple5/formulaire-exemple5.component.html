@@ -1,0 +1,21 @@
+<p>Template driven forms (TDF)*4</p>
+<div class="d-flex justify-content-center align-items-center" style="height: 100vh;">
+    <form [formGroup]="form" (ngSubmit)="onSubmit()"  class="p-4 bg-light rounded" style="width: 300px;">
+        <div class="mb-3">
+            <label for="email" class="form-label">Email:</label>
+            <input type="text" formControlName="email" class="form-control">
+            <div *ngIf="email?.invalid && (email?.dirty || email?.touched)">
+                <div *ngIf="email?.errors?.['required']">Email obligatoire</div>
+                <div *ngIf="email?.errors?.['email']">Mauvais format email</div>
+            </div>
+        </div>
+        <div class="mb-3">
+            <label for="password" class="form-label">Password:</label>
+            <input type="text" formControlName="password" class="form-control">
+        </div>
+        <div  class="d-grid gap-2" >
+            <button 
+                type="submit" class="btn btn-primary">se connecter</button>
+        </div>
+    </form>
+</div>
