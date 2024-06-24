@@ -1,6 +1,7 @@
 import { NgModule } from "@angular/core";
 import {  RouterModule, Routes } from "@angular/router";
 import { ApiuserjavaComponent } from "src/app/apiuserjava/apiuserjava.component";
+import { ApiuserjsonplaceholderComponent } from "src/app/apiuserjsonplaceholder/apiuserjsonplaceholder.component";
 import { ContainerComponent } from "src/app/container/container.component";
 import { DisplayComponent } from "src/app/display/display.component";
 import { FormulaireExempleComponent } from "src/app/formulaire-exemple/formulaire-exemple.component";
@@ -10,8 +11,6 @@ import { FormulaireExemple4Component } from "src/app/formulaire-exemple4/formula
 import { FormulaireExemple5Component } from "src/app/formulaire-exemple5/formulaire-exemple5.component";
 import { HomeComponent } from "src/app/home/home.component";
 import { NotfoundComponent } from "src/app/notfound/notfound.component";
-import { UsersService } from "src/app/service/users.service";
-import { UsersComponent } from "src/app/users/users.component";
 
 const routes:Routes=[
 
@@ -22,7 +21,7 @@ const routes:Routes=[
     {path:'FormulaireExemple4Component',component:FormulaireExemple4Component},
     {path:'FormulaireExemple5Component',component:FormulaireExemple5Component},
     {path:'display',component:DisplayComponent},
-    {path:'users',component:UsersComponent},
+    {path:'users',component: ApiuserjsonplaceholderComponent},
     {path:'container',component:ContainerComponent},
     {path:'userservice',component:ApiuserjavaComponent},
     {path:'**',component:NotfoundComponent}

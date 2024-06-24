@@ -16,8 +16,9 @@ import { FormulaireExemple5Component } from './formulaire-exemple5/formulaire-ex
 import { AppRoutingModule } from 'app-routing.modules';
 import { NotfoundComponent } from './notfound/notfound.component';
 import { HomeComponent } from './home/home.component';
-import { UsersComponent } from './users/users.component';
+
 import { ApiuserjavaComponent } from './apiuserjava/apiuserjava.component';
+import { ApiuserjsonplaceholderComponent } from './apiuserjsonplaceholder/apiuserjsonplaceholder.component';
 
 @NgModule({
   declarations: [
@@ -33,8 +34,8 @@ import { ApiuserjavaComponent } from './apiuserjava/apiuserjava.component';
     FormulaireExemple5Component,
     NotfoundComponent,
     HomeComponent,
-    UsersComponent,
-    ApiuserjavaComponent
+    ApiuserjavaComponent,
+    ApiuserjsonplaceholderComponent
   ],
   imports: [
     BrowserModule,
